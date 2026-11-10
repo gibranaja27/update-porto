@@ -4,6 +4,7 @@ import Reveal from "./Reveal";
 
 export default function Hero() {
   return (
+    // tes hero
     <section
       id="home"
       className="relative mx-auto mt-12 grid min-h-[calc(100vh-76px)]
