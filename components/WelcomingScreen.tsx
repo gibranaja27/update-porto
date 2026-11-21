@@ -50,7 +50,7 @@ export default function WelcomingScreen() {
             </div>
           </div>
 
-          <p className="welcome-footer">DESIGNED WITH PASSION</p>
+          <p className="welcome-footer">Lets Collaborate !</p>
         </div>
       </div>
 

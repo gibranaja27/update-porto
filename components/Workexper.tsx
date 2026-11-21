@@ -8,19 +8,19 @@ const experience = {
   company: "PT Gerbang Data Indonesia",
   role: "UI/UX Designer (Internship)",
   description:
-    "Menjabat sebagai UI/UX Designer (Internship), dengan tanggung jawab merancang antarmuka aplikasi dan website menggunakan Figma, mulai dari wireframe, UI design, hingga prototype. Berkolaborasi dengan tim developer untuk memastikan desain dapat diimplementasikan dengan baik dan sesuai kebutuhan pengguna.",
+    "Menjabat sebagai UI/UX Designer (Internship), dengan tanggung jawab merancang antarmuka aplikasi dan website menggunakan Figma, mulai dari wireframe, UI design, hingga prototype. Berkolaborasi dengan tim developer untuk memastikan desain dapat diimplementasikan dengan baik dan sesuai kebutuhan.",
 
   projects: [
     {
       title: "Project 1",
-      preview: "/images/experience/project-1.png",
-      phone: "/images/experience/project-1-phone.png",
+      preview: "/images/experience/project-1new.jpg",
+      phone: "/images/experience/project_1_phone.png",
       alt: "Gambar presentasi proyek pertama",
     },
     {
       title: "Project 2",
-      preview: "/images/experience/project-2.png",
-      phone: "/images/experience/project-2-phone.png",
+      preview: "/images/experience/project-2.jpg",
+      phone: "/images/experience/project_2_phone.png",
       alt: "Gambar presentasi proyek kedua",
     },
   ],
@@ -44,42 +44,52 @@ export default function WorkExperience() {
       id="experience"
       className="relative isolate w-full overflow-hidden bg-gradient-to-b from-[#eaffc8] via-[#f3ffdf] to-[#eaffc8] px-5 py-16 sm:px-8 sm:py-20 lg:py-24"
     >
-      {/* ================= PREMIUM EDITORIAL BACKGROUND ================= */}
+      {/* ================= ETHEREAL BOTANICAL BACKGROUND ================= */}
+      <div className="work-experience-bg" aria-hidden="true">
+        {/* Ambient light */}
+        <div className="work-bg-glow work-bg-glow-left" />
+        <div className="work-bg-glow work-bg-glow-right" />
+        <div className="work-bg-glow work-bg-glow-center" />
 
-      <div className="experience-editorial" aria-hidden="true">
-        {/* Soft ambient lighting */}
-        <div className="editorial-glow editorial-glow-one" />
-        <div className="editorial-glow editorial-glow-two" />
+        {/* Flowing organic ribbons */}
+        <div className="work-bg-ribbon work-bg-ribbon-one" />
+        <div className="work-bg-ribbon work-bg-ribbon-two" />
+        <div className="work-bg-ribbon work-bg-ribbon-three" />
 
-        {/* Fine texture */}
-        <div className="editorial-dots" />
-
-        {/* Oversized typography */}
-        <div className="editorial-watermark">EXPERIENCE</div>
-
-        {/* Decorative frame */}
-        <div className="editorial-frame editorial-frame-one" />
-        <div className="editorial-frame editorial-frame-two" />
-
-        {/* Geometric accents */}
-        <div className="editorial-orbit editorial-orbit-one" />
-        <div className="editorial-orbit editorial-orbit-two" />
-
-        {/* Small editorial information */}
-        <div className="editorial-meta editorial-meta-left">
-          CREATIVE PORTFOLIO
-          <span>—</span>
+        {/* Botanical leaves */}
+        <div className="work-bg-leaf work-bg-leaf-one">
+          <span />
+        </div>
+        <div className="work-bg-leaf work-bg-leaf-two">
+          <span />
+        </div>
+        <div className="work-bg-leaf work-bg-leaf-three">
+          <span />
+        </div>
+        <div className="work-bg-leaf work-bg-leaf-four">
+          <span />
         </div>
 
-        <div className="editorial-meta editorial-meta-right">
-          SELECTED WORKS
-        </div>
+        {/* Orbiting curves */}
+        <div className="work-bg-orbit work-bg-orbit-one" />
+        <div className="work-bg-orbit work-bg-orbit-two" />
+        <div className="work-bg-orbit work-bg-orbit-three" />
 
-        {/* Corner accent */}
-        <div className="editorial-corner" />
+        {/* Fine dotted texture */}
+        <div className="work-bg-dots" />
+
+        {/* Floating particles */}
+        <span className="work-bg-particle particle-one" />
+        <span className="work-bg-particle particle-two" />
+        <span className="work-bg-particle particle-three" />
+        <span className="work-bg-particle particle-four" />
+        <span className="work-bg-particle particle-five" />
+
+        {/* Sparkle accents */}
+        <span className="work-bg-sparkle sparkle-one" />
+        <span className="work-bg-sparkle sparkle-two" />
+        <span className="work-bg-sparkle sparkle-three" />
       </div>
-
-      {/* ================= MAIN CONTENT ================= */}
 
       {/* ================= MAIN CONTENT ================= */}
 

@@ -1,4 +1,3 @@
-
 import Reveal from "./Reveal";
 
 const projects = [
@@ -30,7 +29,7 @@ const projects = [
     category: "Web Application",
     icon: "🖥️",
     description:
-      "Website pusat kendali berbasis Laravel untuk mengelola, memverifikasi, dan mempublikasikan laporan bencana dari relawan. Sistem ini menjadi pusat pengambilan keputusan dengan data terstruktur, terpusat, dan siap digunakan dalam kondisi darurat.",
+      "Website pusat kendali berbasis Laravel untuk mengelola, memverifikasi, dan mempublikasikan laporan bencana dari relawan ke aplikasi mobile Astacala Rescue. Sistem ini menjadi pusat pengambilan keputusan dengan data terstruktur, terpusat, dan siap digunakan dalam kondisi darurat.",
     technologies: [
       {
         name: "Laravel",
@@ -110,11 +109,9 @@ export default function Projects() {
       {/* ================= MAIN CONTENT ================= */}
 
       <div className="relative mx-auto max-w-6xl">
-
         {/* Header */}
         <Reveal delay="100ms">
           <header className="mb-12 text-left sm:mb-16">
-
             <p
               className="mb-4 inline-flex items-center gap-2 rounded-full
               border border-[#b7d6a2] bg-white/75 px-4 py-2
@@ -147,20 +144,17 @@ export default function Projects() {
               <span className="h-1 w-5 rounded-full bg-[#b4d98d]" />
               <span className="h-1 w-2 rounded-full bg-[#d0e9b1]" />
             </div>
-
           </header>
         </Reveal>
 
         {/* ================= PROJECT LIST ================= */}
 
         <div className="space-y-10 sm:space-y-14">
-
           {projects.map((project, index) => {
             const reverse = index % 2 !== 0;
 
             return (
               <Reveal key={project.number} delay={`${index * 120}ms`}>
-
                 <article
                   className={`group relative grid w-full min-w-0
                   grid-cols-1 items-center gap-5
@@ -171,18 +165,12 @@ export default function Projects() {
                       : "sm:grid-cols-[180px_minmax(0,1fr)]"
                   }`}
                 >
-
                   {/* ================= PROJECT ICON ================= */}
 
                   <div
                     className={`relative flex items-center justify-center
-                    ${
-                      reverse
-                        ? "sm:order-2"
-                        : "sm:order-1"
-                    }`}
+                    ${reverse ? "sm:order-2" : "sm:order-1"}`}
                   >
-
                     {/* Decorative Orbit */}
                     <div
                       aria-hidden="true"
@@ -230,7 +218,6 @@ export default function Projects() {
                         rounded-full bg-[#c3df91]"
                       />
                     </div>
-
                   </div>
 
                   {/* ================= PROJECT INFORMATION ================= */}
@@ -247,13 +234,8 @@ export default function Projects() {
                     group-hover:border-[#a9d883]
                     group-hover:shadow-[0_18px_38px_rgba(40,90,50,0.14)]
                     sm:p-7
-                    ${
-                      reverse
-                        ? "sm:order-1"
-                        : "sm:order-2"
-                    }`}
+                    ${reverse ? "sm:order-1" : "sm:order-2"}`}
                   >
-
                     {/* Card Decorative Circle */}
                     <div
                       aria-hidden="true"
@@ -271,10 +253,8 @@ export default function Projects() {
                     />
 
                     <div className="relative">
-
                       {/* Project Number and Category */}
                       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-
                         <span
                           className="inline-flex items-center gap-2
                           text-[10px] font-bold tracking-[0.2em]
@@ -292,7 +272,6 @@ export default function Projects() {
                         >
                           {project.category}
                         </span>
-
                       </div>
 
                       {/* Project Title */}
@@ -308,7 +287,6 @@ export default function Projects() {
 
                       {/* Technology Tags */}
                       <div className="mt-5 flex flex-wrap gap-2">
-
                         {project.technologies.map((technology) => (
                           <span
                             key={technology.name}
@@ -321,7 +299,6 @@ export default function Projects() {
                             {technology.name}
                           </span>
                         ))}
-
                       </div>
 
                       {/* Description */}
@@ -334,7 +311,6 @@ export default function Projects() {
 
                       {/* Bottom Accent */}
                       <div className="mt-5 flex items-center gap-2">
-
                         <div
                           className="h-1 w-10 rounded-full
                           bg-gradient-to-r from-[#75b85e] to-[#4c9b80]
@@ -350,18 +326,13 @@ export default function Projects() {
                         >
                           PROJECT {project.number}
                         </span>
-
                       </div>
-
                     </div>
                   </div>
-
                 </article>
-
               </Reveal>
             );
           })}
-
         </div>
       </div>
     </section>

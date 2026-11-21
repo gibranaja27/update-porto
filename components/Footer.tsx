@@ -2,8 +2,63 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="relative w-full overflow-hidden border-y border-[#52634a] bg-[#eaffc8]"
+      className="relative w-full overflow-hidden border-y bg-[#eaffc8]"
     >
+      {/* Animated Botanical Background */}
+      <div className="footer-ambient" aria-hidden="true">
+        {/* Soft ambient lighting */}
+        <div className="footer-ambient-glow footer-glow-one" />
+        <div className="footer-ambient-glow footer-glow-two" />
+
+        {/* Flowing organic shapes */}
+        <div className="footer-ribbon footer-ribbon-one" />
+        <div className="footer-ribbon footer-ribbon-two" />
+        <div className="footer-ribbon footer-ribbon-three" />
+
+        {/* Orbital line art */}
+        <svg
+          className="footer-orbit-art"
+          viewBox="0 0 900 600"
+          fill="none"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <ellipse
+            cx="480"
+            cy="300"
+            rx="330"
+            ry="180"
+            stroke="#6e9c50"
+            strokeWidth="1"
+            strokeOpacity=".22"
+          />
+          <ellipse
+            cx="480"
+            cy="300"
+            rx="260"
+            ry="115"
+            stroke="#6e9c50"
+            strokeWidth="1"
+            strokeOpacity=".18"
+            transform="rotate(-28 480 300)"
+          />
+          <circle cx="150" cy="300" r="5" fill="#8abf45" />
+          <circle cx="740" cy="300" r="4" fill="#8abf45" />
+          <circle cx="480" cy="120" r="4" fill="#8abf45" />
+        </svg>
+
+        {/* Floating particles */}
+        <div className="footer-particles">
+          {Array.from({ length: 9 }).map((_, index) => (
+            <span key={index} />
+          ))}
+        </div>
+
+        {/* Small decorative sparkles */}
+        <span className="footer-sparkle footer-sparkle-one">✳</span>
+        <span className="footer-sparkle footer-sparkle-two">✦</span>
+        <span className="footer-sparkle footer-sparkle-three">✧</span>
+      </div>
+
       {/* Decorative Background */}
       <div className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-white/40 blur-3xl" />
       <div className="pointer-events-none absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-[#b5e477]/30 blur-3xl" />
@@ -86,7 +141,7 @@ export default function Footer() {
               <div className="flex items-center gap-3 sm:gap-4">
                 {/* Github */}
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/gibranaja27"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
@@ -103,7 +158,7 @@ export default function Footer() {
 
                 {/* Instagram */}
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/gibrans.rap"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -130,7 +185,7 @@ export default function Footer() {
 
                 {/* LinkedIn */}
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/in/gibran-raja-aulia-putranami"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
@@ -156,7 +211,7 @@ export default function Footer() {
               <div className="flex items-center gap-4">
                 {/* Email */}
                 <a
-                  href="mailto:your-email@example.com"
+                  href="mailto:your-gibrannami43@gmail.com"
                   aria-label="Email"
                   className="text-black transition-all duration-300 hover:-translate-y-1 hover:text-[#568e50]"
                 >
@@ -174,7 +229,7 @@ export default function Footer() {
 
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/62xxxxxxxxxx"
+                  href="https://wa.me/6287876649211"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"

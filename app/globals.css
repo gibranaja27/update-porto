@@ -165,7 +165,6 @@ body {
   color: #17633f;
 }
 
-
 /* =========================================
    AMBIENT 3D ANIMATION
 ========================================= */
@@ -326,7 +325,8 @@ body {
 ========================================= */
 
 @keyframes sphere-float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate3d(0, 0, 0) rotate(0deg);
   }
 
@@ -346,7 +346,8 @@ body {
 }
 
 @keyframes liquid-morph {
-  0%, 100% {
+  0%,
+  100% {
     border-radius: 42% 58% 62% 38% / 45% 42% 58% 55%;
     transform: translateY(0) rotate(0deg);
   }
@@ -358,7 +359,8 @@ body {
 }
 
 @keyframes particle-float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate3d(0, 0, 0) scale(0.8);
     opacity: 0.4;
   }
@@ -377,7 +379,6 @@ body {
     animation: none !important;
   }
 }
-
 
 /* =========================================
    HERO - ANIMATED AURORA CIRCUIT
@@ -468,7 +469,8 @@ body {
 }
 
 @keyframes aurora-node-pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.4;
     transform: scale(0.7);
   }
@@ -494,7 +496,6 @@ body {
     animation: none !important;
   }
 }
-
 
 /* =========================================
    ABOUT ME - BOTANICAL MOTION
@@ -598,13 +599,15 @@ body {
     stroke-dashoffset: 900;
   }
 
-  55%, 100% {
+  55%,
+  100% {
     stroke-dashoffset: 0;
   }
 }
 
 @keyframes botanical-sway {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(-5deg);
   }
 
@@ -614,7 +617,8 @@ body {
 }
 
 @keyframes botanical-particle {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate3d(0, 0, 0) rotate(0deg);
     opacity: 0.3;
   }
@@ -639,7 +643,6 @@ body {
   }
 }
 
-
 /* ACCESSIBILITY */
 @media (prefers-reduced-motion: reduce) {
   .about-botanical *,
@@ -653,13 +656,11 @@ body {
   }
 }
 
-
 /* =========================================
-   WORK EXPERIENCE
-   PREMIUM EDITORIAL BACKGROUND
+   WORK EXPERIENCE - ETHEREAL BOTANICAL UI
 ========================================= */
 
-.experience-editorial {
+.work-experience-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -669,232 +670,1198 @@ body {
 }
 
 /* -----------------------------------------
-   AMBIENT GRADIENT
+   AMBIENT LIGHTING
 ----------------------------------------- */
 
-.editorial-glow {
+.work-bg-glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(2px);
+  pointer-events: none;
+  filter: blur(65px);
 }
 
-.editorial-glow-one {
+.work-bg-glow-left {
+  width: 600px;
+  height: 600px;
+  top: -230px;
+  left: -200px;
+  background: rgba(166, 220, 112, 0.28);
+}
+
+.work-bg-glow-right {
   width: 650px;
   height: 650px;
-  top: -350px;
-  left: -180px;
-
-  background: radial-gradient(
-    circle,
-    rgba(177, 225, 119, 0.38),
-    transparent 70%
-  );
+  right: -280px;
+  bottom: -180px;
+  background: rgba(57, 151, 100, 0.19);
 }
 
-.editorial-glow-two {
-  width: 700px;
-  height: 700px;
-  right: -350px;
-  bottom: -380px;
-
-  background: radial-gradient(
-    circle,
-    rgba(57, 151, 100, 0.13),
-    transparent 70%
-  );
+.work-bg-glow-center {
+  width: 450px;
+  height: 450px;
+  top: 35%;
+  left: 35%;
+  background: rgba(213, 239, 170, 0.28);
+  filter: blur(100px);
 }
 
 /* -----------------------------------------
-   MICRO DOT TEXTURE
+   FLOWING ORGANIC RIBBONS
 ----------------------------------------- */
 
-.editorial-dots {
+.work-bg-ribbon {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  transform-origin: center;
+}
+
+.work-bg-ribbon-one {
+  width: 950px;
+  height: 310px;
+  top: -150px;
+  left: -260px;
+  transform: rotate(-25deg);
+
+  background: linear-gradient(
+    115deg,
+    rgba(118, 184, 82, 0.25),
+    rgba(196, 231, 153, 0.16) 45%,
+    rgba(255, 255, 255, 0.04)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  box-shadow:
+    inset 0 12px 35px rgba(255, 255, 255, 0.25),
+    0 20px 60px rgba(67, 132, 74, 0.04);
+
+  animation: work-ribbon-float 13s ease-in-out infinite;
+}
+
+.work-bg-ribbon-two {
+  width: 850px;
+  height: 260px;
+  right: -310px;
+  bottom: -100px;
+  transform: rotate(-32deg);
+
+  background: linear-gradient(
+    120deg,
+    rgba(57, 151, 100, 0.2),
+    rgba(157, 211, 111, 0.22),
+    rgba(255, 255, 255, 0.1)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  animation: work-ribbon-float 16s ease-in-out infinite reverse;
+}
+
+.work-bg-ribbon-three {
+  width: 650px;
+  height: 180px;
+  top: 42%;
+  left: -390px;
+  transform: rotate(55deg);
+
+  background: linear-gradient(
+    90deg,
+    rgba(125, 190, 91, 0.16),
+    rgba(255, 255, 255, 0.04)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  animation: work-ribbon-float 18s ease-in-out infinite;
+}
+
+/* -----------------------------------------
+   BOTANICAL LEAF SHAPES
+----------------------------------------- */
+
+.work-bg-leaf {
+  position: absolute;
+  width: 190px;
+  height: 85px;
+  border-radius: 100% 0 100% 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(183, 225, 133, 0.38),
+    rgba(71, 151, 91, 0.12)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.48);
+
+  box-shadow:
+    inset 8px 8px 25px rgba(255, 255, 255, 0.32),
+    0 15px 35px rgba(46, 111, 67, 0.06);
+
+  backdrop-filter: blur(4px);
+  transform-origin: bottom center;
+
+  animation: work-leaf-sway 9s ease-in-out infinite;
+}
+
+.work-bg-leaf span {
+  position: absolute;
+  width: 75%;
+  height: 1px;
+  left: 10%;
+  top: 53%;
+  background: rgba(49, 119, 67, 0.25);
+  transform: rotate(-22deg);
+}
+
+.work-bg-leaf-one {
+  top: 14%;
+  right: 5%;
+  transform: rotate(-28deg);
+}
+
+.work-bg-leaf-two {
+  top: 25%;
+  right: 13%;
+  width: 135px;
+  height: 65px;
+  opacity: 0.65;
+  animation-delay: 1.5s;
+}
+
+.work-bg-leaf-three {
+  bottom: 14%;
+  left: 5%;
+  width: 170px;
+  height: 75px;
+  transform: rotate(35deg);
+  opacity: 0.65;
+  animation-delay: 2s;
+}
+
+.work-bg-leaf-four {
+  bottom: 25%;
+  left: 10%;
+  width: 115px;
+  height: 55px;
+  transform: rotate(65deg);
+  opacity: 0.45;
+  animation-delay: 3s;
+}
+
+/* -----------------------------------------
+   ORBITAL CURVES
+----------------------------------------- */
+
+.work-bg-orbit {
+  position: absolute;
+  border: 1px solid rgba(49, 125, 72, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.work-bg-orbit-one {
+  width: 520px;
+  height: 520px;
+  top: -120px;
+  right: -250px;
+  transform: rotate(-25deg);
+  border-style: solid;
+  animation: work-orbit-rotate 45s linear infinite;
+}
+
+.work-bg-orbit-two {
+  width: 360px;
+  height: 360px;
+  top: -40px;
+  right: -170px;
+  border-color: rgba(125, 184, 89, 0.22);
+  animation: work-orbit-rotate 35s linear infinite reverse;
+}
+
+.work-bg-orbit-three {
+  width: 440px;
+  height: 440px;
+  bottom: -260px;
+  left: -180px;
+  border-color: rgba(57, 151, 100, 0.13);
+  animation: work-orbit-rotate 50s linear infinite;
+}
+
+/* -----------------------------------------
+   DOT TEXTURE
+----------------------------------------- */
+
+.work-bg-dots {
   position: absolute;
   inset: 0;
 
   background-image: radial-gradient(
-    rgba(47, 116, 66, 0.38) 0.8px,
-    transparent 0.8px
+    rgba(48, 112, 65, 0.25) 1px,
+    transparent 1px
   );
 
-  background-size: 25px 25px;
-  opacity: 0.17;
+  background-size: 27px 27px;
+  opacity: 0.16;
 
   mask-image: linear-gradient(
     to bottom,
-    transparent,
-    black 15%,
-    black 85%,
-    transparent
+    transparent 0%,
+    black 18%,
+    black 82%,
+    transparent 100%
   );
 }
 
 /* -----------------------------------------
-   OVERSIZED EDITORIAL TYPOGRAPHY
+   FLOATING PARTICLES
 ----------------------------------------- */
 
-.editorial-watermark {
+.work-bg-particle {
   position: absolute;
-  top: 5%;
-  right: -2%;
-
-  font-family: Arial, sans-serif;
-  font-size: clamp(100px, 19vw, 280px);
-  font-weight: 900;
-  letter-spacing: -0.09em;
-  line-height: 1;
-
-  white-space: nowrap;
-  color: rgba(40, 112, 65, 0.18);
-
-  user-select: none;
-}
-
-/* -----------------------------------------
-   EDITORIAL FRAMES
------------------------------------------ */
-
-.editorial-frame {
-  position: absolute;
-  border: 1px solid rgba(49, 125, 72, 0.17);
-}
-
-.editorial-frame-one {
-  top: 12%;
-  left: 5%;
-
-  width: 90%;
-  height: 76%;
-
-  border-radius: 32px;
-}
-
-.editorial-frame-two {
-  top: 15%;
-  left: 7%;
-
-  width: 86%;
-  height: 70%;
-
-  border-color: rgba(255, 255, 255, 0.3);
-  border-radius: 25px;
-}
-
-/* -----------------------------------------
-   ABSTRACT GEOMETRIC ORBITS
------------------------------------------ */
-
-.editorial-orbit {
-  position: absolute;
-  border: 1px solid rgba(49, 125, 72, 0.16);
+  display: block;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
+
+  background: #78b65f;
+
+  box-shadow:
+    0 0 9px rgba(57, 151, 100, 0.48),
+    0 0 20px rgba(143, 198, 91, 0.3);
+
+  animation: work-particle-float 7s ease-in-out infinite;
 }
 
-.editorial-orbit-one {
-  width: 330px;
-  height: 330px;
-  top: 23%;
-  right: -180px;
+.particle-one {
+  top: 20%;
+  left: 27%;
 }
 
-.editorial-orbit-two {
-  width: 220px;
-  height: 220px;
-  bottom: 8%;
-  left: -120px;
+.particle-two {
+  top: 35%;
+  right: 18%;
+  width: 5px;
+  height: 5px;
+  animation-delay: 1.5s;
+}
+
+.particle-three {
+  bottom: 22%;
+  left: 35%;
+  width: 9px;
+  height: 9px;
+  animation-delay: 2.5s;
+}
+
+.particle-four {
+  bottom: 35%;
+  right: 28%;
+  width: 5px;
+  height: 5px;
+  animation-delay: 3s;
+}
+
+.particle-five {
+  top: 12%;
+  left: 62%;
+  width: 4px;
+  height: 4px;
+  animation-delay: 1s;
 }
 
 /* -----------------------------------------
-   EDITORIAL META LABELS
+   SPARKLE ACCENTS
 ----------------------------------------- */
 
-.editorial-meta {
+.work-bg-sparkle {
   position: absolute;
+  width: 12px;
+  height: 12px;
 
-  display: flex;
-  align-items: center;
-  gap: 9px;
+  background: rgba(123, 177, 83, 0.75);
 
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.22em;
+  clip-path: polygon(
+    50% 0%,
+    61% 39%,
+    100% 50%,
+    61% 61%,
+    50% 100%,
+    39% 61%,
+    0% 50%,
+    39% 39%
+  );
 
-  color: rgba(47, 116, 66, 0.38);
+  filter: drop-shadow(0 0 5px rgba(125, 184, 89, 0.55));
+
+  animation: work-sparkle 3.5s ease-in-out infinite;
 }
 
-.editorial-meta-left {
-  top: 7%;
-  left: 8%;
+.sparkle-one {
+  top: 22%;
+  left: 13%;
 }
 
-.editorial-meta-right {
-  right: 8%;
-  bottom: 7%;
+.sparkle-two {
+  top: 48%;
+  right: 9%;
+  width: 9px;
+  height: 9px;
+  animation-delay: 1s;
 }
 
-/* -----------------------------------------
-   CORNER ACCENT
------------------------------------------ */
-
-.editorial-corner {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  width: 110px;
-  height: 110px;
-
-  border-top: 2px solid rgba(57, 151, 100, 0.2);
-  border-right: 2px solid rgba(57, 151, 100, 0.2);
-
-  border-top-right-radius: 35px;
+.sparkle-three {
+  bottom: 17%;
+  right: 33%;
+  width: 7px;
+  height: 7px;
+  animation-delay: 2s;
 }
 
-/* -----------------------------------------
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes work-ribbon-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 22px;
+  }
+}
+
+@keyframes work-leaf-sway {
+  0%,
+  100% {
+    rotate: -3deg;
+  }
+
+  50% {
+    rotate: 5deg;
+  }
+}
+
+@keyframes work-orbit-rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes work-particle-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: translate3d(10px, -24px, 0);
+    opacity: 0.9;
+  }
+}
+
+@keyframes work-sparkle {
+  0%,
+  100% {
+    transform: scale(0.65) rotate(0deg);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform: scale(1.2) rotate(45deg);
+    opacity: 0.95;
+  }
+}
+
+/* =========================================
    RESPONSIVE
------------------------------------------ */
+========================================= */
 
 @media (max-width: 639px) {
-  .editorial-watermark {
-    top: 8%;
-    right: -12%;
-    font-size: 110px;
+  .work-bg-ribbon-one {
+    width: 550px;
+    height: 200px;
+    top: -85px;
+    left: -230px;
   }
 
-  .editorial-frame-one {
-    left: 3%;
-    width: 94%;
-    height: 80%;
+  .work-bg-ribbon-two {
+    width: 500px;
+    height: 180px;
+    right: -280px;
+    bottom: -65px;
   }
 
-  .editorial-frame-two {
-    left: 5%;
-    width: 90%;
-    height: 76%;
+  .work-bg-ribbon-three {
+    width: 400px;
+    height: 130px;
+    left: -280px;
   }
 
-  .editorial-orbit-one {
+  .work-bg-leaf {
+    width: 110px;
+    height: 55px;
+  }
+
+  .work-bg-leaf-one {
+    right: -15px;
+    top: 17%;
+  }
+
+  .work-bg-leaf-two {
+    right: 5%;
+    top: 25%;
+    width: 85px;
+    height: 45px;
+  }
+
+  .work-bg-leaf-three {
+    left: -25px;
+    bottom: 14%;
+  }
+
+  .work-bg-leaf-four {
+    left: 2%;
+    bottom: 23%;
+    width: 80px;
+    height: 40px;
+  }
+
+  .work-bg-orbit-one {
+    width: 280px;
+    height: 280px;
+    right: -180px;
+  }
+
+  .work-bg-orbit-two {
     width: 200px;
     height: 200px;
     right: -130px;
   }
 
-  .editorial-orbit-two {
-    width: 150px;
-    height: 150px;
-    left: -100px;
+  .work-bg-orbit-three {
+    width: 250px;
+    height: 250px;
+    left: -160px;
   }
 
-  .editorial-meta {
-    font-size: 7px;
-    letter-spacing: 0.14em;
+  .work-bg-glow-left {
+    width: 300px;
+    height: 300px;
   }
 
-  .editorial-meta-left {
-    left: 6%;
+  .work-bg-glow-right {
+    width: 320px;
+    height: 320px;
   }
 
-  .editorial-meta-right {
-    right: 6%;
+  .work-bg-glow-center {
+    width: 250px;
+    height: 250px;
+    left: 15%;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .work-experience-bg *,
+  .work-experience-bg *::before,
+  .work-experience-bg *::after {
+    animation: none !important;
+  }
+}
+
+/* ========================================
+   CUSTOM CURSOR - ORGANIC PARTICLE TRAIL
+======================================== */
+
+.custom-cursor-particles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+  z-index: 9999;
+
+  overflow: hidden;
+}
+
+/* Nonaktifkan untuk pengguna yang memilih reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor-particles {
+    display: none;
+  }
+}
+
+/* =========================================
+   CERTIFICATE - ENCHANTED BOTANICAL GALLERY
+========================================= */
+
+.certificate-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      ellipse at 50% 35%,
+      rgba(255, 255, 255, 0.3),
+      transparent 48%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(232, 255, 205, 0.15),
+      transparent 45%,
+      rgba(199, 235, 160, 0.16)
+    );
+}
+
+/* Ambient glow */
+.cert-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(55px);
+  pointer-events: none;
+}
+
+.cert-glow-one {
+  width: 360px;
+  height: 360px;
+  top: 12%;
+  left: -150px;
+  background: rgba(151, 204, 104, 0.25);
+  animation: cert-glow-float 12s ease-in-out infinite alternate;
+}
+
+.cert-glow-two {
+  width: 420px;
+  height: 420px;
+  right: -170px;
+  top: 35%;
+  background: rgba(255, 255, 255, 0.45);
+  animation: cert-glow-float 15s ease-in-out infinite alternate-reverse;
+}
+
+.cert-glow-three {
+  width: 300px;
+  height: 300px;
+  bottom: -120px;
+  left: 35%;
+  background: rgba(137, 190, 91, 0.2);
+  animation: cert-glow-float 13s ease-in-out infinite alternate;
+}
+
+/* Organic ribbons */
+.cert-ribbon {
+  position: absolute;
+  border: 1px solid rgba(103, 157, 88, 0.18);
+  border-radius: 50%;
+  transform: rotate(-35deg);
+  pointer-events: none;
+}
+
+.cert-ribbon-one {
+  width: 520px;
+  height: 170px;
+  top: 16%;
+  left: -230px;
+  background: linear-gradient(
+    90deg,
+    rgba(153, 207, 111, 0.2),
+    rgba(255, 255, 255, 0.05)
+  );
+  animation: cert-ribbon-drift 18s ease-in-out infinite alternate;
+}
+
+.cert-ribbon-two {
+  width: 570px;
+  height: 190px;
+  right: -270px;
+  top: 43%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(151, 202, 112, 0.22)
+  );
+  animation: cert-ribbon-drift 20s ease-in-out infinite alternate-reverse;
+}
+
+.cert-ribbon-three {
+  width: 430px;
+  height: 130px;
+  bottom: 8%;
+  left: 20%;
+  border-color: rgba(111, 164, 92, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  animation: cert-ribbon-drift 22s ease-in-out infinite alternate;
+}
+
+/* Botanical leaf accents */
+.cert-leaf {
+  position: absolute;
+  width: 65px;
+  height: 30px;
+  border: 1px solid rgba(80, 139, 76, 0.24);
+  border-radius: 100% 0 100% 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.35),
+    rgba(126, 184, 91, 0.18)
+  );
+  transform-origin: center;
+  animation: cert-leaf-sway 7s ease-in-out infinite;
+}
+
+.cert-leaf::after {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 1px;
+  left: 8%;
+  top: 50%;
+  background: rgba(82, 137, 76, 0.25);
+  transform: rotate(-18deg);
+}
+
+.cert-leaf-one {
+  top: 24%;
+  left: 8%;
+  transform: rotate(35deg);
+}
+
+.cert-leaf-two {
+  top: 57%;
+  right: 8%;
+  transform: rotate(125deg);
+  animation-delay: -2s;
+}
+
+.cert-leaf-three {
+  bottom: 15%;
+  left: 12%;
+  transform: rotate(65deg) scale(0.75);
+  animation-delay: -3s;
+}
+
+.cert-leaf-four {
+  top: 13%;
+  right: 15%;
+  transform: rotate(155deg) scale(0.8);
+  animation-delay: -4s;
+}
+
+/* Orbital rings */
+.cert-orbit {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  border: 1px solid rgba(91, 146, 79, 0.16);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cert-orbit-one {
+  width: min(780px, 85vw);
+  height: 420px;
+  animation: cert-orbit-rotate 40s linear infinite;
+}
+
+.cert-orbit-two {
+  width: min(920px, 95vw);
+  height: 540px;
+  border-style: dashed;
+  border-color: rgba(91, 146, 79, 0.11);
+  animation: cert-orbit-rotate 55s linear infinite reverse;
+}
+
+/* Dot texture */
+.cert-dot-field {
+  position: absolute;
+  inset: 0;
+  opacity: 0.3;
+  background-image: radial-gradient(
+    rgba(78, 139, 75, 0.55) 1px,
+    transparent 1px
+  );
+  background-size: 32px 32px;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 18%,
+    black 82%,
+    transparent
+  );
+}
+
+/* Floating particles */
+.cert-particle {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(91, 151, 77, 0.5);
+  box-shadow: 0 0 14px rgba(111, 173, 88, 0.4);
+  animation: cert-particle-float 8s ease-in-out infinite;
+}
+
+.cert-particle-one {
+  top: 25%;
+  left: 22%;
+}
+
+.cert-particle-two {
+  top: 38%;
+  right: 17%;
+  animation-delay: -2s;
+}
+
+.cert-particle-three {
+  bottom: 25%;
+  left: 30%;
+  animation-delay: -4s;
+}
+
+.cert-particle-four {
+  bottom: 17%;
+  right: 25%;
+  animation-delay: -1s;
+}
+
+/* Sparkles */
+.cert-sparkle {
+  position: absolute;
+  color: rgba(85, 143, 73, 0.55);
+  font-size: 24px;
+  animation: cert-sparkle-twinkle 4s ease-in-out infinite;
+}
+
+.cert-sparkle-one {
+  top: 18%;
+  left: 35%;
+}
+
+.cert-sparkle-two {
+  top: 55%;
+  right: 12%;
+  font-size: 30px;
+  animation-delay: -1.5s;
+}
+
+.cert-sparkle-three {
+  bottom: 18%;
+  left: 17%;
+  font-size: 18px;
+  animation-delay: -2.5s;
+}
+
+/* Animations */
+@keyframes cert-glow-float {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(35px, -25px, 0) scale(1.12);
+  }
+}
+
+@keyframes cert-ribbon-drift {
+  from {
+    translate: -10px 0;
+    rotate: -4deg;
+  }
+  to {
+    translate: 30px 20px;
+    rotate: 4deg;
+  }
+}
+
+@keyframes cert-leaf-sway {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 13px;
+  }
+}
+
+@keyframes cert-orbit-rotate {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes cert-particle-float {
+  0%,
+  100% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(-24px) scale(1.3);
+    opacity: 0.9;
+  }
+}
+
+@keyframes cert-sparkle-twinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8) rotate(0deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.2) rotate(20deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .cert-ribbon-one {
+    left: -330px;
+  }
+
+  .cert-ribbon-two {
+    right: -360px;
+  }
+
+  .cert-orbit-one {
+    width: 115vw;
+    height: 330px;
+  }
+
+  .cert-orbit-two {
+    width: 130vw;
+    height: 430px;
+  }
+
+  .cert-leaf {
+    opacity: 0.55;
+    scale: 0.75;
+  }
+
+  .cert-dot-field {
+    background-size: 25px 25px;
+    opacity: 0.2;
+  }
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .certificate-bg *,
+  .certificate-bg *::before,
+  .certificate-bg *::after {
+    animation: none !important;
+  }
+}
+
+/* =========================================
+   FOOTER — LIVING BOTANICAL ORBIT
+========================================= */
+
+.footer-ambient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Ambient lighting */
+
+.footer-ambient-glow {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  filter: blur(75px);
+  opacity: 0.38;
+}
+
+.footer-glow-one {
+  top: -150px;
+  right: 8%;
+  background: #c4ed8c;
+  animation: footerGlow 9s ease-in-out infinite alternate;
+}
+
+.footer-glow-two {
+  right: -130px;
+  bottom: -180px;
+  background: #a9dc69;
+  opacity: 0.3;
+  animation: footerGlow 12s ease-in-out infinite alternate-reverse;
+}
+
+/* Organic flowing ribbons */
+
+.footer-ribbon {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 48% 52% 65% 35% / 45% 35% 65% 55%;
+  filter: blur(1px);
+  transform-origin: center;
+}
+
+.footer-ribbon-one {
+  width: 470px;
+  height: 190px;
+  top: 30px;
+  right: -110px;
+  background: linear-gradient(
+    125deg,
+    rgba(178, 222, 119, 0.13),
+    rgba(120, 175, 77, 0.2),
+    rgba(234, 255, 200, 0.08)
+  );
+  border: 1px solid rgba(104, 148, 75, 0.14);
+  animation: footerRibbon 16s ease-in-out infinite alternate;
+}
+
+.footer-ribbon-two {
+  width: 390px;
+  height: 155px;
+  right: 5%;
+  bottom: -85px;
+  background: linear-gradient(
+    135deg,
+    rgba(143, 195, 91, 0.12),
+    rgba(199, 235, 153, 0.2)
+  );
+  border: 1px solid rgba(104, 148, 75, 0.12);
+  animation: footerRibbon 19s ease-in-out infinite alternate-reverse;
+}
+
+.footer-ribbon-three {
+  width: 230px;
+  height: 95px;
+  top: 48%;
+  right: 22%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(104, 148, 75, 0.12);
+  animation: footerFloat 8s ease-in-out infinite;
+}
+
+/* Orbital line art */
+
+.footer-orbit-art {
+  position: absolute;
+  width: min(75%, 900px);
+  height: 100%;
+  right: -8%;
+  top: 0;
+  opacity: 0.85;
+  animation: footerOrbit 55s linear infinite;
+}
+
+/* Floating particles */
+
+.footer-particles span {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #7da94d;
+  opacity: 0.35;
+  animation: footerParticle 7s ease-in-out infinite;
+}
+
+.footer-particles span:nth-child(1) {
+  top: 18%;
+  right: 18%;
+}
+
+.footer-particles span:nth-child(2) {
+  top: 36%;
+  right: 38%;
+  animation-delay: -2s;
+}
+
+.footer-particles span:nth-child(3) {
+  top: 72%;
+  right: 15%;
+  animation-delay: -4s;
+}
+
+.footer-particles span:nth-child(4) {
+  top: 55%;
+  right: 48%;
+  animation-delay: -1s;
+}
+
+.footer-particles span:nth-child(5) {
+  top: 20%;
+  right: 55%;
+  animation-delay: -3s;
+}
+
+.footer-particles span:nth-child(6) {
+  top: 82%;
+  right: 35%;
+  animation-delay: -5s;
+}
+
+.footer-particles span:nth-child(7) {
+  top: 42%;
+  right: 8%;
+  animation-delay: -2.5s;
+}
+
+.footer-particles span:nth-child(8) {
+  top: 12%;
+  right: 42%;
+  animation-delay: -4.5s;
+}
+
+.footer-particles span:nth-child(9) {
+  top: 68%;
+  right: 58%;
+  animation-delay: -3.5s;
+}
+
+/* Sparkles */
+
+.footer-sparkle {
+  position: absolute;
+  color: #719c4e;
+  opacity: 0.45;
+  animation: footerSparkle 4s ease-in-out infinite;
+}
+
+.footer-sparkle-one {
+  top: 20%;
+  right: 12%;
+  font-size: 25px;
+}
+
+.footer-sparkle-two {
+  top: 65%;
+  right: 42%;
+  font-size: 18px;
+  animation-delay: -1.5s;
+}
+
+.footer-sparkle-three {
+  top: 38%;
+  right: 5%;
+  font-size: 30px;
+  animation-delay: -2.5s;
+}
+
+/* Animations */
+
+@keyframes footerGlow {
+  from {
+    transform: translate3d(-15px, -10px, 0) scale(0.95);
+  }
+  to {
+    transform: translate3d(20px, 15px, 0) scale(1.12);
+  }
+}
+
+@keyframes footerRibbon {
+  from {
+    transform: rotate(-8deg) translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: rotate(9deg) translate3d(-25px, 18px, 0) scale(1.08);
+  }
+}
+
+@keyframes footerFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(5deg);
+  }
+}
+
+@keyframes footerOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes footerParticle {
+  0%,
+  100% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-22px) scale(1.35);
+    opacity: 0.65;
+  }
+}
+
+@keyframes footerSparkle {
+  0%,
+  100% {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.15) rotate(25deg);
+    opacity: 0.65;
+  }
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 640px) {
+  .footer-orbit-art {
+    width: 110%;
+    right: -38%;
+    opacity: 0.45;
+  }
+
+  .footer-ribbon-one {
+    width: 300px;
+    height: 130px;
+    right: -150px;
+  }
+
+  .footer-ribbon-two {
+    width: 270px;
+    right: -90px;
+  }
+
+  .footer-ribbon-three {
+    right: 5%;
+  }
+
+  .footer-ambient-glow {
+    width: 250px;
+    height: 250px;
+  }
+
+  .footer-sparkle-two {
+    right: 15%;
+  }
+}
+
+/* Accessibility: respect reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-ambient *,
+  .footer-ambient svg {
+    animation: none !important;
   }
 }

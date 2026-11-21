@@ -38,10 +38,42 @@ export default function Certificate() {
       id="license"
       className="relative w-full overflow-hidden bg-[#eaffc8] px-5 py-16 sm:px-8 sm:py-20"
     >
-      {/* Decorative Background */}
-      <div className="pointer-events-none absolute left-1/2 top-40 h-72 w-72 -translate-x-1/2 rounded-full bg-white/40 blur-3xl" />
+      
+{/* Decorative Background */}
+<div className="certificate-bg" aria-hidden="true">
+  {/* Ambient glow */}
+  <div className="cert-glow cert-glow-one" />
+  <div className="cert-glow cert-glow-two" />
+  <div className="cert-glow cert-glow-three" />
 
-      <div className="relative mx-auto max-w-6xl">
+  {/* Floating organic ribbons */}
+  <div className="cert-ribbon cert-ribbon-one" />
+  <div className="cert-ribbon cert-ribbon-two" />
+  <div className="cert-ribbon cert-ribbon-three" />
+
+  {/* Botanical leaves */}
+  <span className="cert-leaf cert-leaf-one" />
+  <span className="cert-leaf cert-leaf-two" />
+  <span className="cert-leaf cert-leaf-three" />
+  <span className="cert-leaf cert-leaf-four" />
+
+  {/* Orbital rings */}
+  <div className="cert-orbit cert-orbit-one" />
+  <div className="cert-orbit cert-orbit-two" />
+
+  {/* Decorative particles */}
+  <div className="cert-dot-field" />
+  <span className="cert-particle cert-particle-one" />
+  <span className="cert-particle cert-particle-two" />
+  <span className="cert-particle cert-particle-three" />
+  <span className="cert-particle cert-particle-four" />
+  <span className="cert-sparkle cert-sparkle-one">✦</span>
+  <span className="cert-sparkle cert-sparkle-two">✧</span>
+  <span className="cert-sparkle cert-sparkle-three">✦</span>
+</div>
+
+<div className="relative z-10 mx-auto max-w-6xl">
+
 
         {/* Header */}
         <Reveal delay="100ms">
