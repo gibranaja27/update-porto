@@ -8,7 +8,7 @@ const experience = {
   company: "PT Gerbang Data Indonesia",
   role: "UI/UX Designer (Internship)",
   description:
-    "Menjabat sebagai UI/UX Designer (Internship), dengan tanggung jawab merancang antarmuka aplikasi dan website menggunakan Figma, mulai dari wireframe, UI design, hingga prototype. Berkolaborasi dengan tim developer untuk memastikan desain dapat diimplementasikan dengan baik dan sesuai kebutuhan.",
+    "Served as a UI/UX Designer (Intern), responsible for designing application and website interfaces using Figma—ranging from wireframes and UI designs to prototypes. Collaborated with the development team to ensure that designs could be effectively implemented and met all project requirements.",
 
   projects: [
     {

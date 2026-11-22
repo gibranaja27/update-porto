@@ -9,7 +9,7 @@ const skills = [
     image: "/icon/skill-uiux.png",
     alt: "UI/UX Design",
     description:
-      "Merancang tampilan dan pengalaman pengguna yang intuitif, menarik, dan mudah digunakan.",
+      "Designing a user interface and experience that is engaging, appealing, and easy to use.",
     tags: ["Wireframe", "UI Design", "Prototyping"],
   },
   {
@@ -18,7 +18,7 @@ const skills = [
     image: "/icon/skill-frontend.png",
     alt: "Front End Development",
     description:
-      "Mengubah desain menjadi antarmuka website yang responsif, interaktif, dan nyaman digunakan.",
+      "Transforming designs into a responsive, interactive, and user-friendly website interface.",
     tags: ["HTML & CSS", "JavaScript", "Responsive UI"],
   },
   {
@@ -27,7 +27,7 @@ const skills = [
     image: "/icon/skill-backend.png",
     alt: "Back End Development",
     description:
-      "Mempelajari pengembangan sisi server untuk mendukung pengolahan data dan fungsi aplikasi.",
+      "Learning server-side development to support data processing and application functionality.",
     tags: ["PHP", "Database", "Server Logic"],
   },
 ];

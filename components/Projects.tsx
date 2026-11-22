@@ -3,11 +3,11 @@ import Reveal from "./Reveal";
 const projects = [
   {
     number: "01",
-    title: "Aplikasi Mobile Relawan Astacala Rescue",
+    title: "Astacala Rescue Volunteer Mobile Application",
     category: "Mobile Application",
     icon: "📱",
     description:
-      "Aplikasi mobile berbasis Flutter untuk mendukung pelaporan dan penyebaran informasi bencana secara real-time. Relawan dapat mengirim data lokasi, skala bencana, korban, dan dokumentasi lapangan, sementara pengguna umum memperoleh informasi bencana terverifikasi melalui peta interaktif.",
+      "A Flutter-based mobile application designed to support real-time disaster reporting and information dissemination. Volunteers can submit data—including location, disaster scale, casualty information, and field documentation—while the general public can access verified disaster information via an interactive map.",
     technologies: [
       {
         name: "Flutter",
@@ -25,11 +25,11 @@ const projects = [
   },
   {
     number: "02",
-    title: "Website Admin Pusat Kendali ASTACALA Rescue",
+    title: "Admin Website for ASTACALA Rescue Control Center",
     category: "Web Application",
     icon: "🖥️",
     description:
-      "Website pusat kendali berbasis Laravel untuk mengelola, memverifikasi, dan mempublikasikan laporan bencana dari relawan ke aplikasi mobile Astacala Rescue. Sistem ini menjadi pusat pengambilan keputusan dengan data terstruktur, terpusat, dan siap digunakan dalam kondisi darurat.",
+      "A Laravel-based control center website for managing, verifying, and publishing disaster reports from volunteers to the Astacala Rescue mobile application. This system serves as the decision-making hub with structured, centralized data, ready for use in emergency situations.",
     technologies: [
       {
         name: "Laravel",
